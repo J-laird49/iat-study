@@ -1,5 +1,5 @@
 define(['pipAPI', 'https://cdn.jsdelivr.net/gh/J-laird49/iat-study@main/iat-core.js'], function(APIConstructor, iatExtension){
-    var API = new APIConstructor();
+    let API = new APIConstructor();
 
     //Randomly select which of two sets of category labels to use.
     let raceSet = API.shuffle(['a','b'])[0];
@@ -33,7 +33,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/J-laird49/iat-study@main/iat-core
 	
 	return iatExtension({
 		category1 : {
-			name : 'Black people', //Will appear in the data.
+			name : global.blackLabels, //Will appear in the data.
 			title : {
 				media : {word : 'Black people'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'2em'}, //Style of the category title.
@@ -51,7 +51,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/J-laird49/iat-study@main/iat-core
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
 		},	
 		category2 :	{
-			name : 'White people', //Will appear in the data.
+			name : gloabl.whiteLabels, //Will appear in the data.
 			title : {
 				media : {word : 'White people'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'2em'}, //Style of the category title.
