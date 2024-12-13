@@ -1,5 +1,5 @@
 define(['pipAPI', 'https://cdn.jsdelivr.net/gh/J-laird49/iat-study@main/iat-core.js'], function(APIConstructor, iatExtension){
-    let API = new APIConstructor();
+    var API = new APIConstructor();
 
     //Randomly select which of two sets of category labels to use.
     let raceSet = API.shuffle(['a','b'])[0];
