@@ -30,12 +30,16 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/J-laird49/iat-study@main/iat-core
     });
 
     let global = API.getGlobal();
+	console.log(global.blackLabels);
+    	console.log(global.whiteLabels);
+    	console.log(global.posWords);
+    	console.log(global.negWords);
 	
 	return iatExtension({
 		category1 : {
 			name : global.blackLabels[0], //Will appear in the data.
 			title : {
-				media : {word : 'Black People'}, //Name of the category presented in the task.
+				media : {word : 'global.blackLabels[0]'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
@@ -53,7 +57,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/J-laird49/iat-study@main/iat-core
 		category2 : {
 			name : global.whiteLabels[0], //Will appear in the data.
 			title : {
-				media : {word : 'White People'}, //Name of the category presented in the task.
+				media : {word : 'global.whiteLabels[0]'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
